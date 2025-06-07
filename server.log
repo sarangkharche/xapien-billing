@@ -1,0 +1,5 @@
+2025/06/07 14:59:49 ⏳ Testing connection to DynamoDB...
+2025/06/07 14:59:50 ✅ Connected to DynamoDB successfully
+2025/06/07 14:59:50 🚀 Server running on http://localhost:8080
+2025/06/07 14:59:50 listen tcp :8080: bind: address already in use
+exit status 1

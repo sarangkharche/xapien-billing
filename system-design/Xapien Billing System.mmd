@@ -1,0 +1,19 @@
+graph TD
+    A[Client] -->|"POST /set-plan"| B[API Handler]
+    A -->|"POST /set-user-limit"| B
+    A -->|"POST /use-credit"| B
+    A -->|"POST /top-up"| B
+    A -->|"GET /get-org"| B
+
+    B --> C[UseCase Layer]
+    C --> D[Domain Logic]
+    D --> E[DynamoDB DAO]
+
+    C --> F[Notification Service]
+    F -->|"80% usage alert"| G[Customer Success Team]
+    F -->|"Limit reached alert"| G
+
+    E --> H[(DynamoDB Table)]
+
+    style D fill:#f9f,stroke:#333,stroke-width:2px
+    style C fill:#9ff,stroke:#333,stroke-width:2px
